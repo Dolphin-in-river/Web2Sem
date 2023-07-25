@@ -1,0 +1,329 @@
+.l-main {
+    margin: 0;
+}
+
+.l-main-section{
+    padding: 10px;
+}
+
+.l-main-products{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.l-main-product-image{
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.small-picture{
+    height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-main-gallery {
+    margin: 0 20px 20px;
+    position: relative;
+}
+
+.l-main-pictures-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.l-main-picture {
+    flex: 1;
+    height: 600px;
+    overflow: hidden;
+    transition: 200ms;
+}
+
+.l-main-picture img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.8s;
+    transform: scale(1.2);
+}
+
+.l-main-picture:hover img {
+    transform: scale(1);
+}
+
+@media screen and (max-width: 1250px) {
+    .l-main-picture {
+        display: none;
+    }
+}
+
+.registration__content_wrapper {
+    padding: 30px 0 96px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+}
+
+@media (max-width: 635px) {
+    .registration__content_wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+.registration__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 360px;
+}
+
+.registration__fieldset {
+}
+
+@media (max-width: 635px) {
+    .registration__fieldset {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+.registration__form_input {
+    border-radius: 15px;
+    width: 340px;
+    min-height: 44px;
+    border: 1px solid #A4A4A4;
+    margin: 20px 0 0 0;
+    padding: 0 0 0 17px;
+}
+
+.registration__form_input ::-webkit-input-placeholder {
+    color: #B1B1B1;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.registration__form_input ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #B1B1B1;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.registration__form_input :-ms-input-placeholder {
+    color: #B1B1B1;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.registration__form_input :-moz-placeholder {
+    /* Firefox 18- */
+    color: #B1B1B1;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.registration__form_login_legend {
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 300;
+    font-style: normal;
+    color: #222224;
+    margin: auto;
+}
+
+@media (max-width: 635px) {
+    .registration__form_login_legend {
+        padding: 0 0 0 10px;
+    }
+}
+.product {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.product p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.product {
+    text-align: center;
+    border: 1px solid black;
+    width: 15em;
+    background-color: white;
+    color: #091a0c;
+    font-family: Roboto, sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    font-weight: bold;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.product img {
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1250px) {
+    .product-container {
+        display: none;
+    }
+}
+
+.product-container {
+    margin: 0;
+    text-align: center;
+}
+
+.product-grid-image {
+    display: inline-grid;
+    gap: 20px;
+    grid-template-areas:
+    "product-1 product-2 product-3"
+    "product-4 product-5 product-6";
+}
+
+.additional-picture-sizes{
+    width: 590px;
+}
+
+.product-1 {
+    grid-area: product-1;
+}
+
+.product-2 {
+    grid-area: product-2;
+}
+
+.product-3 {
+    grid-area: product-3;
+}
+
+.product-4 {
+    grid-area: product-4;
+}
+
+.product-5 {
+    grid-area: product-5;
+}
+
+.product-6 {
+    grid-area: product-6;
+}
+.container {
+    display: flex; /* Установка контейнера на Flexbox */
+}
+
+.column {
+    flex-basis: 50%; /* Ширина каждой колонки равна 50% от ширины контейнера */
+}
+
+#table td {
+    margin: auto;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 300;
+    font-style: normal;
+    color: #222224;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#pagination {
+    text-align: center;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    margin: 10px 10px 10px 0px;
+}
+
+#pagination li {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    color: #091a0c;
+    font-family: Roboto, sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+#pagination li:hover, #pagination li.active {
+    cursor: pointer;
+    color: #000f3f;
+    border: 1px solid #000f3f;
+}
+
+.list-of-orders {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear-buttons {
+    text-align: center;
+}

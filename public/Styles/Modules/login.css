@@ -1,0 +1,83 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.open-button {
+    cursor: pointer;
+}
+
+.blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    background: #a2ef41;
+    margin: 0;
+    box-shadow: 10px 5px 5px darkseagreen;
+    font-size: 19px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.un-blur {
+    filter: blur(0px);
+    margin: 0;
+    box-shadow: 10px 5px 5px darkseagreen;
+    font-size: 19px;
+    font-weight: 300;
+    padding: 10px;
+    background: #a2ef41;
+}
+
+.form-popup {
+    display: none;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #8adc1c;
+    z-index: 11;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 10px;
+    background: #a2ef41;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.form-container {
+    padding: 10px;
+    background-color: #55792a;;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #8adc1c;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-container .cancel {
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}

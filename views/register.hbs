@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<title>Войти</title>
+<script src="Scripts/showOrders.js"></script>
+<body>
+{{> header}}
+<main class="shadow-for-blocks main-theme" id="mainContent">
+  <div class="container">
+    <div class="column" id="registration">
+      <div class="registration__content_wrapper container header-text normal-white-space">
+        <form class="registration__form">
+          <fieldset class="registration__fieldset">
+            <legend class="registration__form_login_legend">Введите данные для регистрации</legend>
+            <input type="text" class="registration__form_input" id="surname1" placeholder="Фамилия">
+            <input type="text" class="registration__form_input" id="name1" placeholder="Имя">
+            <input type="text" class="registration__form_input" id="patronymic1" placeholder="Отчество">
+            <input type="text" class="registration__form_input" id="phone1" placeholder="Телефон">
+            <input type="email" class="registration__form_input" id="email1" placeholder="Email">
+            <input type="password" class="registration__form_input" id="password1" placeholder="Пароль">
+          </fieldset>
+          <button type="submit" class="l-nav-bar-button make-order l-hiding-things button-margin" onclick="register()">Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="column" id="login-button">
+      <div class="registration__content_wrapper container header-text normal-white-space">
+        <form class="registration__form">
+          <fieldset class="registration__fieldset">
+            <legend class="registration__form_login_legend">Введите свои данные</legend>
+            <input type="login" class="registration__form_input" id="login" placeholder="Логин">
+            <input type="password" class="registration__form_input" id="password" placeholder="Пароль">
+          </fieldset>
+          <button class="l-nav-bar-button make-order l-hiding-things button-margin" onclick="onLogin()">Войти
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="clear-buttons">
+      <div class="clear-account">
+        <button id="not-see-button2" class="l-nav-bar-button make-order l-hiding-things button-margin not-see-button"
+                onclick="exit()">Выйти из аккаунта
+        </button>
+      </div>
+<!--      <div class="delete-account">-->
+<!--        <button id="not-see-button1" class="l-nav-bar-button make-order l-hiding-things button-margin not-see-button"-->
+<!--                onclick="myDelete()">Удалить аккаунт-->
+<!--        </button>-->
+<!--      </div>-->
+    </div>
+  </div>
+
+  <div class="product-container">
+    <div class="product-grid-image grid-table" id="order-list">
+    </div>
+  </div>
+
+  <div class="list-of-orders" id="list-of-orders">
+    <table>
+      <thead class="head-table">
+      <tr class="row-table">
+        <th class="head-table-theme">Id</th>
+        <th class="head-table-theme">Стоимость</th>
+        <th class="head-table-theme">Время совершения заказа</th>
+        <th class="head-table-theme">Статус</th>
+      </tr>
+      </thead>
+      <tbody class="body-table" id="table">
+      </tbody>
+    </table>
+    <ul class="" id="pagination"></ul>
+  </div>
+
+
+</main>
+{{> openButton}}
+{{> footer}}
+<script src="Scripts/swiper.js"></script>
+</body>
+</html>

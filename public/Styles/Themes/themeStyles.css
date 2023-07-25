@@ -1,0 +1,94 @@
+.nav-bar-theme{
+    background: #55792a;
+}
+
+.nav-bar-button-theme{
+     color: #091a0c;
+     background: #8adc1c;
+     font-family: Roboto, sans-serif;
+     border-color:#000;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+     font-weight: bold;
+ }
+
+.nav-bar-button-theme:hover {
+    color: #091a0c;
+    background: #a0d75d;
+    font-family: Roboto, sans-serif;
+    border-color:#000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    font-weight: bold;
+}
+
+.red-nav-bar-button-theme{
+    background: #dc1c1c;
+}
+
+.red-nav-bar-button-theme:hover {
+    background: #d75d6f;
+}
+
+.main-theme{
+    background: #a2ef41;
+    font-size: 19px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.important-things-theme{
+    background: greenyellow;
+    font-weight: 600;
+}
+
+.important-things-theme-warning{
+    background: #FF4184;
+}
+
+.iteration{
+    font-size: 20.5px;
+    line-height: 1.5;
+}
+
+.list-theme{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.big-text{
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.footer-text-theme{
+    font-size: 24px;
+    line-height: 1.75;
+}
+
+.header-text{
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: 20px;
+}
+
+.red-string{
+    text-indent: 20px;
+}
+
+.normal-white-space{
+    white-space: normal;
+    letter-spacing: normal;
+}
+
+.shadow-for-blocks{
+    box-shadow: 10px 5px 5px darkseagreen;
+}
+
+.head-table-theme {
+    background-color: lightblue;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.bg {
+    /*background-color: #a2ef41; !* здесь нужно указать нужный цвет фона в формате HEX *!*/
+}

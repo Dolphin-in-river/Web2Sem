@@ -1,0 +1,31 @@
+.card-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px 50px;
+}
+
+.post-common {
+    max-width: 500px;
+    border: 2px solid #8adc1c;
+    box-shadow: 0 0 10px #55792a;
+    border-radius: 15px;
+}
+.post-title {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0 10px;
+    text-transform: capitalize;
+}
+
+.post-body {
+    text-align: center;
+    padding: 0 10px 10px;
+}
+
+.error-text{
+    text-align: center;
+    background: #FF4184;
+    font-weight: 600;
+    font-weight: bold;
+}

@@ -1,0 +1,126 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Person {
+  id         Int       @id @default(autoincrement())
+  name       String
+  surname    String
+  patronymic String?
+  phone      String    @unique
+  email      String    @unique
+  login      String    @unique
+  password   String
+  role       Role?
+  customer   Customer?
+  supplier   Supplier?
+}
+
+model Customer {
+  id                      Int                  @id @default(autoincrement())
+  person                  Person               @relation(fields: [personId], references: [id])
+  personId                Int                  @unique
+  supportChat             SupportChat?
+  currentSelectedProducts ProductForCustomer[]
+  Order                   Order[]
+}
+
+model Supplier {
+  id       Int                  @id @default(autoincrement())
+  person   Person               @relation(fields: [personId], references: [id])
+  personId Int                  @unique
+  products ProductInWarehouse[]
+}
+
+model ProductInWarehouse {
+  id                 Int                 @id @default(autoincrement())
+  name               String
+  description        String?
+  linkToPhoto        String
+  price              Float
+  productForCustomer ProductForCustomer?
+  amountInWarehouse  Int
+  supplier           Supplier?           @relation(fields: [supplierId], references: [id])
+  supplierId         Int?
+}
+
+model ProductForCustomer {
+  id            Int                @id @default(autoincrement())
+  product       ProductInWarehouse @relation(fields: [productId], references: [id])
+  productId     Int                @unique
+  amountInOrder Int
+  price         Float
+  Customer      Customer?          @relation(fields: [customerId], references: [id])
+  customerId    Int?
+  Order         Order?             @relation(fields: [orderId], references: [id])
+  orderId       Int?
+}
+
+model Order {
+  id          Int                  @id @default(autoincrement())
+  customer    Customer             @relation(fields: [customerId], references: [id])
+  customerId  Int
+  totalPrice  Float
+  dateTime    String
+  orderStatus OrderStatus
+  products    ProductForCustomer[]
+  delivery    DeliveryInformation?
+  payment     Payment?
+}
+
+model Payment {
+  id            Int     @id @default(autoincrement())
+  order         Order   @relation(fields: [orderId], references: [id])
+  orderId       Int     @unique
+  isConfirm     Boolean
+  totalPrice    Float
+  dateTime      String
+  paymentMethod Int
+}
+
+enum Role {
+  Customer
+  Supplier
+  Moderator
+  Admin
+}
+
+enum OrderStatus {
+  InProcessing
+  WaitingToSent
+  Sent
+  WaitingAtThePickUpPoint
+  Received
+}
+
+model SupportChat {
+  id         Int       @id @default(autoincrement())
+  customer   Customer  @relation(fields: [customerId], references: [id])
+  customerId Int       @unique
+  personId   Int?      @unique
+  messages   Message[]
+}
+
+model Message {
+  id            Int          @id @default(autoincrement())
+  text          String
+  dateTime      String
+  SupportChat   SupportChat? @relation(fields: [supportChatId], references: [id])
+  supportChatId Int?
+}
+
+model DeliveryInformation {
+  id       Int    @id @default(autoincrement())
+  address  String
+  dateTime String
+  order    Order? @relation(fields: [orderId], references: [id])
+  orderId  Int?   @unique
+}

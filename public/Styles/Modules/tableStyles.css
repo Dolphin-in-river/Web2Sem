@@ -1,0 +1,31 @@
+.table{
+    margin: 20px auto;
+}
+
+.grid-table {
+    display: grid;
+    border-color:#000;
+    border-width: 1px;
+    border-style: dashed;
+    grid-template-columns: 1fr 1fr;
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+    border: 1px solid black;
+}
+
+.field-in-table {
+    padding: 10px;
+    text-align: center;
+}
+
+.row-table:nth-of-type(odd) .field-in-table {
+    background-color: lightcoral;
+}
+
+.row-table:nth-of-type(even) .field-in-table {
+    background-color: lightblue;
+}

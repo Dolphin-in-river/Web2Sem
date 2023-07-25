@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head}}
+<link rel="stylesheet" href="Styles/Themes/themeStyles.css" type="text/css">
+<link rel="stylesheet" href="Styles/Modules/tableStyles.css" type="text/css">
+<link rel="stylesheet" href="Styles/Modules/card.css" type="text/css">
+<script src="Scripts/feedbacks.js"></script>
+<body>
+{{> header}}
+<main class="shadow-for-blocks main-theme" id="mainContent">
+  <section class="l-main-section">
+    <h1 class="header-text normal-white-space l-hiding-things">
+      Отзывы
+    </h1>
+    <form class="feedback-form">
+      <label>
+                <textarea required id="feedback-name" maxlength="100" placeholder="ФИО" name="text"
+                          class="feedback-name text-input fio"></textarea>
+      </label>
+      <label>
+                <textarea id="feedback-content" placeholder="Содержание"
+                          class="feedback-name feedback-space text-input con"></textarea>
+      </label>
+      <button type='submit' class="feedback-button but">Добавить отзыв</button>
+    </form>
+
+    <h2 class="header-text normal-white-space l-hiding-things">
+      Предыдущие&nbsp;отзывы:
+    </h2>
+    <div>
+      <table class="table-feedback">
+        <thead>
+        <tr>
+          <th class="field-table-feedback">ФИО</th>
+          <th class="field-table-feedback">Содержание</th>
+        </tr>
+        </thead>
+        <tbody class="feedback">
+        </tbody>
+      </table>
+
+      <template id="template-feedback">
+        <tr>
+          <td class="field-table-feedback">
+            ${newObject["feedback-name"]}
+          </td>
+          <td class="field-table-feedback">
+            ${newObject["feedback-content"]}
+          </td>
+        </tr>
+      </template>
+    </div>
+  </section>
+
+  <h2 class="header-text normal-white-space l-hiding-things">
+    Отзывы&nbsp;предыдущих&nbsp;коллег:
+  </h2>
+  <div id="posts">
+    <img src="Sources/Gif/Banana.gif" alt="preloading" id="preloading" class="preloading">
+  </div>
+</main>
+{{> openButton}}
+{{> footer}}
+<script src="Scripts/posts.js"></script>
+</body>
+</html>

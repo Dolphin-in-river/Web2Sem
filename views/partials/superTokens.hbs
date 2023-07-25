@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js/bundle/website.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js/bundle/supertokens.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js/bundle/session.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js/bundle/emailpassword.js"></script>
+<script>
+  import * as supertokensSession from "supertokens-web-js";
+  import * as supertokensEmailPassword from "supertokens-node";
+
+  supertokens.init({
+    appInfo: {
+      apiDomain: `${location.protocol}//${location.host}`,
+      apiBasePath: "/api",
+      appName: "dolphin-in-river",
+    },
+    recipeList: [
+      supertokensSession.init(),
+      supertokensEmailPassword.init(),
+    ],
+  });
+</script>

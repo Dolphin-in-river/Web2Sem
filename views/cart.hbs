@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<title>Корзина</title>
+
+<body>
+{{> header}}
+
+<main class="shadow-for-blocks main-theme" id="mainContent">
+  <div class="section">
+    <div class="section__title">Выбранные продукты</div>
+    <div class="card-list shopping-cart__list" id="shopping-cart-list">
+    </div>
+  </div>
+  <div class="section">
+    <div class="section__title">Итого</div>
+    <div class="shopping-cart__total-price " id="total-price"></div>
+    <label for="promocode" class="visually-hidden">Promocode</label>
+    <input type="text" id="promocode" class="header__icon search-place" placeholder="PROMOCODE">
+  </div>
+  <div class="section">
+    <form action="post" class="cart__shipping">
+      <h3 class="section__title">Данные для доставки</h3>
+      <label for="address" class="visually-hidden">State</label>
+      <input type="text" id="address1" class="header__icon search-place" placeholder="Russia, Orel">
+    </form>
+    <button class="make-order button l-nav-bar-button l-hiding-things" type="button" onclick="MakeOrder()">Сделать заказ</button>
+  </div>
+</main>
+
+{{> openButton}}
+{{> footer}}
+{{> superTokens}}
+<script src="Scripts/cart.js"></script>
+<script src="Scripts/swiper.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+</body>
+</html>
